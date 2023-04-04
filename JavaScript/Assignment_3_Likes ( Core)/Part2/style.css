@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 20px;
+  font-family: cursive;
+}
+.container > h2 {
+  font-size: 30px;
+  text-align: center;
+  margin: 20px 0px;
+}
+.p-20 {
+  padding: 0% 20%;
+}
+nav {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+}
+aside {
+  width: auto;
+  height: auto;
+  float: left;
+  text-align: center;
+  border: 5px solid black;
+  padding: 50px;
+}
+aside img {
+  width: 100px;
+  padding-bottom: 20px;
+}
+aside p {
+  padding-top: 20px;
+  font-size: 30px;
+}
+main {
+  width: 65%;
+  float: right;
+}
+.pad {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  border: 5px solid black;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  justify-content: space-between;
+}
+.d-flex button {
+  border: 3px solid black;
+  width: 80px;
+  height: auto;
+  font-size: 27px;
+  background-color: yellow;
+  box-shadow: 5px 5px black;
+}
+
+button:active {
+  background-color: rgb(135, 135, 45);
+  transform: translateY(2px);
+}
