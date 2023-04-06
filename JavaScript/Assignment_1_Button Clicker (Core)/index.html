@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dojonary</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="d-flex j-between">
+        <p>Dojonary</p>
+        <input type="text" name="text" id="text" placeholder="Search" />
+        <button onclick="changeText(this)" class="nav-btn" type="button">
+          Login
+        </button>
+      </nav>
+
+      <aside class="m-20">
+        <div class="a-p j-center">
+          <p>Dojonary is</p>
+          <p>defined by <span>You</span></p>
+        </div>
+        <button onclick="removeElement(this)" class="as-btn" type="button">
+          Add Definitation
+        </button>
+      </aside>
+      <main class="m-20">
+        <div class="column d-flex">
+          <div class="content">
+            <h2 class="p-10">ninja</h2>
+            <p class="p-10">noun</p>
+            <p class="p-10">Plural:<span>ninjas</span></p>
+            <button
+              onclick="showNotification(this)"
+              class="con-btn"
+              type="button"
+            >
+              <span>13 like</span>
+            </button>
+          </div>
+          <p>
+            A practioner skilled in the <a href="#">Japonese</a> art of
+            <a href="#">ninjutsu</a>
+          </p>
+        </div>
+        <div class="column d-flex">
+          <div class="content">
+            <h2 class="p-10">ninja</h2>
+            <p class="p-10">noun</p>
+            <p class="p-10">Plural:<span>ninjas</span></p>
+            <button onclick="notification(this)" class="con-btn" type="button">
+              <span>13 like</span>
+            </button>
+          </div>
+          <p>
+            A <a href="#">programmer</a> who breaks down problems with
+            <a href="#">zen</a>-like fokus
+            <a href="#">ninjutsu</a>
+          </p>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

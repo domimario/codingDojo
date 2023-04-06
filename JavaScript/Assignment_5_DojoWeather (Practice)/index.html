@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="d-flex j-between a-items w-80">
+          <h2>Dojo Weather</h2>
+          <ul class="d-flex" onclick="showAlert(this)">
+            <li><a href="#">Burbank</a></li>
+            <li><a href="#">Chicago</a></li>
+            <li><a href="#">Dallas</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main class="w-80">
+        <div class="d-flex a-items j-between">
+          <h2>San Jose</h2>
+          <div class="d-flex j-between">
+            <p>show temperature in</p>
+            <select name="drop" id="drop">
+              <option id="celsius" onchange="convertC(this)" value="C">
+                C
+              </option>
+              <option id="fahrenheit" onchange="convertF(this)" value="F">
+                F
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex j-around t-center">
+          <div class="col">
+            <h1>Today</h1>
+            <img src="./assets/assets/some_rain.png" alt="some_rain" />
+            <p>some rain</p>
+            <div class="d-flex">
+              <p class="grade">24<span>&#176;</span></p>
+              <p class="grade">18<span>&#176;</span></p>
+            </div>
+          </div>
+          <div class="col">
+            <h1>Tomorrow</h1>
+            <img src="./assets/assets/some_sun.png" alt="some_sun" />
+            <p>some sun</p>
+            <div class="d-flex">
+              <p class="grade">27<span>&#176;</span></p>
+              <p class="grade">19<span>&#176;</span></p>
+            </div>
+          </div>
+          <div class="col">
+            <h1>Friday</h1>
+            <img src="./assets/assets/some_clouds.png" alt="some_rain" />
+            <p>some clouds</p>
+            <div class="d-flex">
+              <p class="grade">21<span>&#176;</span></p>
+              <p class="grade">16<span>&#176;</span></p>
+            </div>
+          </div>
+          <div class="col">
+            <h1>Saturday</h1>
+            <img src="./assets/assets/some_sun.png" alt="some_rain" />
+            <p>some sun</p>
+            <div class="d-flex">
+              <p class="grade">26<span>&#176;</span></p>
+              <p class="grade">21<span>&#176;</span></p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="d-flex w-80 a-items">
+        <img src="./assets/assets/cookie.png" alt="" />
+        <div>
+          <p><span>Stop! Coockie time</span></p>
+          <p>
+            We use cookies ( sadly not the edible ones) to personalize content
+            and ads , to provide social media features and to analyse our
+            traffic. <a href="#">Read more ...</a>
+          </p>
+        </div>
+
+        <button onclick="removeCookies(this)">I accept</button>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

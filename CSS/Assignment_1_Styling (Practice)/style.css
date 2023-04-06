@@ -1,0 +1,31 @@
+.container {
+  padding: 10px;
+  margin: 10px;
+}
+
+.first-block {
+  background-color: black;
+  color: aliceblue;
+  font-family: cursive;
+}
+
+.second-block {
+  background-color: purple;
+  color: aliceblue;
+  text-align: center;
+  text-decoration: none;
+  font-family: monospace;
+  font-style: italic;
+ 
+}
+
+.third-block {
+  background-color: rgb(99, 225, 239);
+  color: rgb(37, 20, 20);
+  text-align: end;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+span {
+  color: rgb(99, 225, 239);
+}

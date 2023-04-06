@@ -1,0 +1,101 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fixed width container class that will "auto-center" itself */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.btn {
+  height: 35px;
+  width: 80px;
+  color: white;
+  background-color: l;
+  border: 3px solid black;
+  box-shadow: 5px 5px black;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.row {
+  display: flex;
+}
+
+/* Col Properties */
+
+.col,
+.col-2,
+.col-3 {
+  background-color: rgb(64, 142, 134);
+  padding: 10px;
+  margin: 10px;
+  color: white;
+}
+.col {
+  flex: 1;
+}
+.col-2 {
+  flex: 2;
+}
+.col-3 {
+  flex: 3;
+}
+.nav {
+  background-color: rgb(50, 50, 64);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-title {
+  color: white;
+  font-family: cursive;
+  margin: 0px 20px;
+}
+
+/* Navigation Links */
+
+.nav-links {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  text-align: justify;
+}
+.nav-links li {
+  display: inline;
+  margin: 0px 25px;
+}
+li a {
+  color: rgb(160, 168, 175);
+}
+.btn {
+  height: 35px;
+  width: 80px;
+  color: white;
+  background-color: l;
+  border: 3px solid black;
+  box-shadow: 5px 5px black;
+  cursor: pointer;
+  font-size: medium;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.active {
+  text-decoration: none;
+  color: white;
+}
+.btn:hover {
+  text-decoration: none;
+  background-color: white;
+  color: rgb(49, 118, 208);
+  border: 3px solid rgb(49, 118, 208);
+}

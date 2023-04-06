@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background-color: azure;
+}
+
+.container {
+  padding: 10px;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table,
+td {
+  width: 500px;
+}
+
+th {
+  background-color: beige;
+}
+
+.photo {
+  padding: 10px;
+}
+img {
+  border-radius: 8px;
+}
+* {
+  background-color: red;
+}

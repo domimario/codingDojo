@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--NAVIGATION-->
+      <nav class="nav d-flex a-items j-evently">
+        <!--Left Navigation-->
+        <div class="nav-left d-flex a-items">
+          <h3 class="nav-title">Profile</h3>
+          <ul class="nav-links d-flex">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" id="active"> My Profile</a></li>
+            <li><a href="#">Find Connection</a></li>
+          </ul>
+        </div>
+        <!--Right Navigation-->
+        <button class="nav-btn btn">Sign Out</button>
+      </nav>
+      <!--MAIN-->
+      <main class="font">
+        <div class="row w-70 m-auto j-evently d-flex">
+          <!--Left Column-->
+          <div class="col-left b-col">
+            <!--Nav User-->
+            <div class="nav-user"></div>
+            <img class="user-photo b-col" src="user-circle.png" alt="" />
+            <!--Main User-->
+            <div class="main-user pad-40">
+              <h3 id="main-h3">Jane Doe</h3>
+              <div class="location d-flex">
+                <img class="location-icon" src="map-marker.png" alt="" />
+                <p>Seattle</p>
+              </div>
+              <div class="proffesion">
+                <p>Developer | Engineer | Problem Solver</p>
+                <p>Master of shadows and the Internet</p>
+              </div>
+              <!--Footer User-->
+              <div class="edit d-flex">
+                <img class="edit-icon" src="gear.png" alt="" />
+                <a href="#"><p>edit profile</p></a>
+              </div>
+            </div>
+          </div>
+          <!--Right Column-->
+          <div class="col-right b-col">
+            <div class="request d-flex a-items j-around">
+              <p class="r-circle t-algin bg">2</p>
+              <p>Connection Requests</p>
+            </div>
+            <div class="request-accepted">
+              <div class="person d-flex a-items j-between">
+                <div class="d-flex a-items">
+                  <img src="todd-s.jpg" alt="" />
+                  <p>Todd E</p>
+                </div>
+                <div class="m-acept d-flex a-items">
+                  <img src="accept-circle.png" alt="" />
+                  <img src="close-circle.png" alt="" />
+                </div>
+              </div>
+              <div class="person d-flex a-items j-between">
+                <div class="d-flex a-items">
+                  <img src="phil-s.jpg" alt="" />
+                  <p>Phil K</p>
+                </div>
+                <div class="d-flex a-items">
+                  <img src="accept-circle.png" alt="" />
+                  <img src="close-circle.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row w-70 m-auto j-evently d-flex">
+          <!--Left Column-->
+          <div class="col-left b-col">
+            <nav class="education pad-40 d-flex a-items">Education</nav>
+            <div class="e-description pad-40 pad-t-b">
+              <h3>Coding Dojo - Full Stack Bootcamp</h3>
+              <p class="dates">Dec 2019 - Mar 2020</p>
+              <p>Triple black belt in Python , MERN , and C#...</p>
+            </div>
+          </div>
+          <!--Right Column-->
+          <div class="col-right up b-col">
+            <div class="request d-flex a-items j-around">
+              <p class="circle-2 t-algin bg">500+</p>
+              <p>Your Connection</p>
+            </div>
+            < class="request-accepted">
+              <div class="person d-flex a-items">
+                <img src="adrien-s.jpg" alt="" />
+                <p>Adrien D</p>
+              </div>
+              <div class="person d-flex a-items">
+                <img src="anne-s.jpg" alt="" />
+                <p>Anne J</p>
+              </div>
+              <div class="person d-flex a-items">
+                <img src="alayne-s.jpg" alt="" />
+                <p>Alayne T</p>
+              </div>
+              <div class="person d-flex a-items">
+                <img src="arry-s.jpg" alt="" />
+                <p>Arry Y</p>
+              </div>
+              
+                <a class=" view person d-flex a-items" href="http://"><p>View More</p></a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

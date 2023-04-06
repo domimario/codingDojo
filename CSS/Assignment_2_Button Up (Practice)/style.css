@@ -1,0 +1,53 @@
+.container {
+  margin: 70px 0px 0px 70px;
+}
+
+.search-box,
+.plus-box,
+.create-box {
+  padding: 10px;
+}
+
+.search {
+  width: 230px;
+  height: 50px;
+  padding: 0px 30px;
+  background-color: aliceblue;
+  font-size: 20px;
+  border-radius: 70px;
+  color: rgb(26, 188, 145);
+  border: 2px solid rgb(26, 188, 145);
+}
+.search:hover {
+  background-color: rgb(26, 188, 145);
+  color: aliceblue;
+}
+.plus {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(26, 188, 145);
+  font-size: 25px;
+  color: white;
+  border-radius: 50%;
+  border: none;
+}
+.plus:hover {
+  background-color: white;
+  color: rgb(26, 188, 145);
+  border: 2px solid rgb(26, 188, 145);
+}
+.create {
+  height: 50px;
+  width: 250px;
+  background-color: rgb(49, 118, 208);
+  font-size: 20px;
+  color: white;
+  border: 3px solid black;
+  box-shadow: 5px 5px black;
+}
+.create:hover {
+  background-color: white;
+  color: rgb(49, 118, 208);
+  border: 3px solid rgb(49, 118, 208);
+  box-shadow: 5px 5px rgb(49, 118, 208);
+}

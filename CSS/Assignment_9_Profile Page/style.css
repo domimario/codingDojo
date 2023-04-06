@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.d-flex {
+  display: flex;
+}
+.a-items {
+  align-items: center;
+}
+.j-center {
+  justify-content: center;
+}
+.w-70 {
+  width: 70%;
+}
+.m-auto {
+  margin: auto;
+}
+.t-algin {
+  text-align: center;
+}
+.bg {
+  background-color: rgb(164, 160, 160);
+}
+.b-col {
+  border: 3px solid rgba(130, 130, 130, 1);
+}
+.j-evently {
+  justify-content: space-evenly;
+}
+.j-around {
+  justify-content: space-around;
+}
+.j-between {
+  justify-content: space-between;
+}
+.font {
+  font-family: cursive;
+}
+.dates {
+  padding: 1px 0px 6px;
+  color: rgb(160, 168, 175);
+}
+
+.nav {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-title {
+  font-size: 30px;
+}
+.nav-links {
+  margin-left: 30px;
+  list-style: none;
+}
+
+.nav-links li a {
+  margin: 0px 25px;
+  color: rgb(160, 168, 175);
+  text-decoration: none;
+}
+
+#active {
+  color: white;
+}
+
+.btn {
+  height: 30px;
+  width: 80px;
+  color: white;
+  background-color: rgb(120, 200, 249);
+  cursor: pointer;
+  font-size: medium;
+}
+
+/* MAIN */
+
+main {
+  height: auto;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Main Column Left */
+
+.col-left {
+  width: 57%;
+  margin: 0px 0px 30px 0px;
+  height: fit-content;
+}
+.nav-user {
+  background-color: rgba(23, 162, 184, 1);
+  height: 90px;
+  margin: -2px -2px 0px -2px;
+}
+.user-photo {
+  width: 100px;
+  height: 100px;
+  margin: -45px 0px 0px 30px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+}
+.pad-40 {
+  padding-left: 40px;
+}
+#main-h3 {
+  font-size: 30px;
+}
+.location {
+  margin: 2px 0px 5px 0px;
+  font-size: 17px;
+}
+.location-icon {
+  margin-top: 4px;
+  width: 9px;
+  height: 15px;
+  margin-right: 10px;
+}
+.edit {
+  margin: 10px 0px 25px 0px;
+}
+.edit-icon {
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+/* Main Column Right */
+
+.col-right {
+  width: 27%;
+  height: fit-content;
+}
+.request {
+  width: 100%;
+  background-color: rgb(62, 60, 60);
+  font-size: 20px;
+  height: 50px;
+  color: white;
+}
+.r-circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+.circle-2 {
+  border-radius: 50%;
+  width: 60px;
+  height: 30px;
+  color: black;
+}
+.view {
+  border-top: 3px solid rgba(130, 130, 130, 1);
+}
+.person {
+  font-size: 20px;
+  padding: 10px;
+}
+.person img {
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px 0px 5px;
+}
+
+.education {
+  background-color: rgb(62, 60, 60);
+  height: 40px;
+  margin: -2px -2px 0px -2px;
+  font-size: 20px;
+  color: white;
+}
+
+.up {
+  margin-top: -160px;
+}

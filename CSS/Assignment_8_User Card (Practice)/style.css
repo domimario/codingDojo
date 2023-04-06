@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 600px;
+  height: 300px;
+  border: 3px solid rgba(130, 130, 130, 1);
+  margin: 70px;
+}
+.nav {
+  width: 606px;
+  height: 100px;
+  margin: -3px 0px 0px -3px;
+  background-color: rgba(23, 162, 184, 1);
+}
+
+.main > img {
+  margin-top: -60px;
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+  border: 3px solid rgba(130, 130, 130, 1);
+  border-radius: 50%;
+  padding: 2px;
+  background-color: whitesmoke;
+}
+.info {
+  margin-left: 45px;
+}
+#name h3 {
+  font-size: 25px;
+  font-family: cursive;
+  margin-top: -5px;
+}
+#location {
+  display: flex;
+  justify-content: flex-start;
+  margin: 7px 0px;
+}
+#location img {
+  width: 9px;
+  height: 15px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+#location p {
+  font-size: 15px;
+  font-family: cursive;
+}
+#proffesion {
+  font-style: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  padding: 6px 0px;
+  margin-bottom: 2px;
+  margin-top: -2px;
+}
+.footer {
+  margin-left: 45px;
+}
+#edit {
+  display: flex;
+  justify-content: flex-start;
+  font-size: medium;
+  font-family: cursive;
+}
+#edit img {
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
