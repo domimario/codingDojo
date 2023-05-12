@@ -1,0 +1,155 @@
+// Connect to MongoDB
+mongo.exe
+
+---------------------------------------------------------------------------------------------------------
+
+// Create a database called 'my_first_db'
+use my_first_db
+
+---------------------------------------------------------------------------------------------------------
+
+// Create a students collection
+db.createCollection("students")
+
+---------------------------------------------------------------------------------------------------------
+
+// Insert five documents into the students collection
+db.students.insertMany([
+  {
+    name: "Mario",
+    home_state: "california",
+    lucky_number: 7,
+    birthday: {month: 12, day: 17, year: 2001}
+  },
+  {
+    name: "gerti",
+    home_state: "washington",
+    lucky_number: 3,
+    birthday: {month: 9, day: 12, year: 2001}
+  },
+  {
+    name: "flogerti",
+    home_state: "california",
+    lucky_number: 8,
+    birthday: {month: 5, day: 20, year: 1997}
+  },
+  {
+    name: "kejdi",
+    home_state: "washington",
+    lucky_number: 14,
+    birthday: {month: 2, day: 8, year: 2001}
+  },
+  {
+    name: "endi",
+    home_state: "California",
+    lucky_number: 5,
+    birthday: {month: 12, day: 3, year: 1998}
+  }
+])
+
+---------------------------------------------------------------------------------------------------------
+
+// Get all students
+db.students.find().pretty()
+
+---------------------------------------------------------------------------------------------------------
+
+// Retrieve all students who are from California (San Jose Dojo) or Washington (Seattle Dojo).
+db.students.find({
+  home_state: { $in: ["California", "Washington"] }
+})
+
+---------------------------------------------------------------------------------------------------------
+
+//Get all students whose lucky number is greater than 3
+db.students.find({
+  lucky_number: { $gt: 3 }
+})
+
+---------------------------------------------------------------------------------------------------------
+
+//Get all students whose lucky number is less than or equal to 10
+db.students.find({
+  lucky_number: { $lte: 10 }
+})
+
+---------------------------------------------------------------------------------------------------------
+
+//Get all students whose lucky number is between 1 and 9 (inclusive)
+db.students.find({
+  lucky_number: { $gte: 1, $lte: 9 }
+})
+
+---------------------------------------------------------------------------------------------------------
+
+//Add a field named 'interests' to all student documents in the collection. 
+//The field should be an array and contain the following entries: 'coding', 'brunch', MongoDB'.
+//Add this field to all documents using a single command.
+
+ db.students.updateMany({}, {
+  $set: { interests: ['coding', 'brunch', 'MongoDB'] }
+})
+
+---------------------------------------------------------------------------------------------------------
+
+//Add some unique interests for each particular student into each of their interest arrays.
+db.students.find().forEach(function(student) {
+  db.students.updateOne(
+    { _id: student._id },
+    { $push: { interests: { $each: ['hiking', 'music', 'travel'] } } }
+  )
+})
+
+---------------------------------------------------------------------------------------------------------
+
+//Add the interest 'taxes' into someone's interest array.
+db.students.updateOne(
+  { name: "mario" },
+  { $addToSet: { interests: "taxes" } }
+)
+
+---------------------------------------------------------------------------------------------------------
+
+//Remove the 'taxes' interest you just added.
+db.students.updateOne(
+  { name: "John Doe" },
+  { $pull: { interests: "taxes" } }
+)
+
+---------------------------------------------------------------------------------------------------------
+
+//Remove all students who are from California.
+db.students.deleteMany({ home_state: "California" })
+
+---------------------------------------------------------------------------------------------------------
+
+//Remove a student whose lucky number is greater than 5 (JUST ONE)
+db.students.deleteOne({ lucky_number: { $gt: 5 } })
+
+---------------------------------------------------------------------------------------------------------
+
+//Add a field to each student document called 'number_of_belts' and set it to 0.
+db.students.updateMany({}, { $set: { number_of_belts: 0 } })
+
+---------------------------------------------------------------------------------------------------------
+
+//Increment this field by 1 for all students in Washington (Seattle Dojo).
+db.students.updateMany(
+  { home_state: "Washington" },
+  { $inc: { number_of_belts: 1 } }
+)
+
+---------------------------------------------------------------------------------------------------------
+
+//Rename the 'number_of_belts' field to 'belts_earned'
+db.students.updateMany({}, { $rename: { "number_of_belts": "belts_earned" } })
+
+---------------------------------------------------------------------------------------------------------
+
+//Remove the 'lucky_number' field.
+db.students.updateMany({}, { $unset: { lucky_number: "" } })
+
+---------------------------------------------------------------------------------------------------------
+
+//Add a 'updated_on' field, and set the value as the current date.
+db.students.updateMany({}, { $currentDate: { updated_on: true } })
