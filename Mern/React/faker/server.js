@@ -33,7 +33,7 @@ const createUser = () => {
       country: faker.address.country(),
     },
   };
-  return User;
+  return User;                     
 };
 
 app.get("/api/users/new", (req, res) => {
