@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const ProductForm = (props) => {
+  const { product, setProduct } = props;
   const [tittle, setTittle] = useState("");
   const [price, setPrice] = useState(Number);
-
   const [description, setDescription] = useState("");
 
   const onSubmitHandle = (e) => {
@@ -18,6 +18,10 @@ const ProductForm = (props) => {
       .then((res) => {
         console.log(res);
         console.log(res.data);
+        setTittle("");
+        setPrice("");
+        setDescription("");
+        setProduct([...product, res.data]);
       })
       .catch((err) => console.log(err));
   };
@@ -41,7 +45,7 @@ const ProductForm = (props) => {
           <label className="col-sm-2 col-form-label">Price</label>
           <div className="col-sm-10">
             <input
-              type="text"
+              type="number"
               className="form-control"
               id="inputPrice"
               onChange={(e) => setPrice(e.target.value)}
