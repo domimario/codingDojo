@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
 import ProductForm from "../components/ProductsForm";
 import ProductList from "../components/ProductList";
 
 const Main = (props) => {
   const [product, setProduct] = useState([]);
+
   return (
     <>
       <div>
