@@ -6,6 +6,7 @@ const EditAuthor = (props) => {
   const { id } = useParams();
   const [name, setName] = useState();
   const navigate = useNavigate();
+  const [error, setError] = useState({});
   const [loaded, setloaded] = useState(false);
 
   useEffect(() => {
@@ -20,17 +21,21 @@ const EditAuthor = (props) => {
 
   const updateHandler = (e) => {
     e.preventDefault();
-    axios
-      .patch(`http://localhost:8000/api/authors/` + id, {
-        name,
-      })
-      .then((res) => {
-        console.log(res);
-        navigate(`/`);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (name.length < 3) {
+      setError({ name: "Name should be at least 3 characters long" });
+    } else {
+      axios
+        .patch(`http://localhost:8000/api/authors/` + id, {
+          name,
+        })
+        .then((res) => {
+          console.log(res);
+          navigate(`/`);
+        })
+        .catch((err) => {
+          setError(err.response.data.errors.name.message);
+        });
+    }
   };
 
   const cancelHandler = (e) => {
@@ -52,7 +57,7 @@ const EditAuthor = (props) => {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-
+            {error.name ? <p>{error.name}</p> : null}
             <div className="d-flex justify-content-around">
               <button
                 onClick={cancelHandler}

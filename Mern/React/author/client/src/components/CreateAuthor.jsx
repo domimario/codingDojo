@@ -4,21 +4,27 @@ import { useNavigate, Link } from "react-router-dom";
 
 const CreateAuthor = (props) => {
   const { update, setUpdate } = props;
+  const [error, setError] = useState({});
   const [name, setName] = useState("");
-
   const navigate = useNavigate();
 
   const onSubmitHandle = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8000/api/authors", {
-        name,
-      })
-      .then((res) => {
-        setUpdate(!update);
-        navigate(`/`);
-      })
-      .catch((err) => console.log(err));
+    if (name.length < 3) {
+      setError({ name: "Name should be at least 3 characters long" });
+    } else {
+      axios
+        .post("http://localhost:8000/api/authors", {
+          name,
+        })
+        .then((res) => {
+          setUpdate(!update);
+          navigate(`/`);
+        })
+        .catch((err) => {
+          setError(err.response.data.errors.name.message);
+        });
+    }
   };
   const cancelHandler = (e) => {
     navigate(`/`);
@@ -37,7 +43,7 @@ const CreateAuthor = (props) => {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-
+          {error.name ? <p>{error.name}</p> : null}
           <div className="d-flex justify-content-around">
             <button onClick={cancelHandler} className="btn btn-outline-danger">
               Cancel
