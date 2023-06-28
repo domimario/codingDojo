@@ -14,7 +14,7 @@ const CreateAuthor = (props) => {
       setError({ name: "Name should be at least 3 characters long" });
     } else {
       axios
-        .post("http://localhost:8000/api/authors", {
+        .post("http://localhost:8002/api/authors", {
           name,
         })
         .then((res) => {

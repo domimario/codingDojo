@@ -11,7 +11,7 @@ const EditAuthor = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/authors/" + id)
+      .get("http://localhost:8002/api/authors/" + id)
       .then((res) => {
         setName(res.data.name);
         setloaded(true);
@@ -25,7 +25,7 @@ const EditAuthor = (props) => {
       setError({ name: "Name should be at least 3 characters long" });
     } else {
       axios
-        .patch(`http://localhost:8000/api/authors/` + id, {
+        .patch(`http://localhost:8002/api/authors/` + id, {
           name,
         })
         .then((res) => {
@@ -78,3 +78,13 @@ const EditAuthor = (props) => {
   );
 };
 export default EditAuthor;
+
+
+module.exports.createPirat = (req, res) => {
+  Pirat.create(req.body)
+    .then((newPirat) => {
+      console.log(newPirat);
+      res.json(newPirat);
+    })
+    .catch((err) => res.status(400).json(err));
+};

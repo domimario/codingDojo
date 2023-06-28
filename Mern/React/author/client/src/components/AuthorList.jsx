@@ -8,7 +8,7 @@ const AuthorList = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/authors")
+      .get("http://localhost:8002/api/authors")
       .then((res) => {
         console.log(res.data);
         setAuthor(res.data);
@@ -18,7 +18,7 @@ const AuthorList = (props) => {
 
   const DeleteAuthor = (id) => {
     axios
-      .delete(`http://localhost:8000/api/authors/` + id)
+      .delete(`http://localhost:8002/api/authors/` + id)
       .then((res) => {
         setUpdate(!update);
       })
